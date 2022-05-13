@@ -1,0 +1,14 @@
+class Main {
+  public static void main(String[] args) {
+     char[][] table = new char[6][10];
+
+      for(int a = 0; a < table.length; a++) {
+          System.out.println(" ");
+            for(int b = 0; b < table[0].length; b++) {
+                table[a][b] = '%';
+
+                System.out.print(table[a][b] + " ");
+            }
+        } 
+      }
+}
