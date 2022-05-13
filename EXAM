@@ -1,0 +1,65 @@
+class Main {
+  public static void main(String[] args) {
+    int list1[] = {1,2,3,4,5};
+    int list2[] = {-6,7,8,9,0,3};
+
+    System.out.println("List 1: " + averageArray(list1));
+    System.out.println("Min: " + minValue(list2));
+    System.out.println("Max: " + maxValue(list2));
+    printArray(arrayMerge(list1, list2));
+  }
+  
+  public static void printArray(int[] list){
+    System.out.print("[");
+    for(int i=0; i < list.length; i++){
+      System.out.print(" " + list[i] + " ");
+    }
+    System.out.println("]");
+  }
+  public static double averageArray(int[] list){
+        double total = 0;
+        for (int i = 0; i < list.length; i++) {
+            total = total + list[i];
+        }
+        return total / list.length;
+  }
+  public static int minValue(int [] list){
+     int minvalue = 0;
+        for (int i = 0; i < list.length; i++) {
+            for (int j = i + 1; j < list.length; j++) {
+                if (list[i] < list[j]) {
+                    minvalue = list[i];
+                    list[i] = list[j];
+                    list[j] = minvalue;
+                }
+            }
+        }
+
+        return minvalue;
+    }
+  public static int maxValue(int [] list){
+        int max = 0;
+       
+        for(int i = 0; i<list.length; i++ ){
+         for(int j = i+1; j<list.length; j++){
+            if(list[i]<list[j]){
+               max = list[i];
+               list[i] = list[j];
+               list[j] = max;
+            }
+         }
+      }
+    return list[0];
+  }
+  public static int[] arrayMerge(int[] l1, int [] l2){
+    int[] concatenated = new int[l1.length + l2.length];
+        for (int i = l1.length; i < concatenated.length; i++) {
+            for (int a = 0; a < l1.length; a++) {
+                concatenated[a] = l1[a];
+            }
+            concatenated[i] = l2[i - l1.length];
+        }
+        return concatenated;
+    } 
+
+}
