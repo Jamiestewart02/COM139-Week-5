@@ -1,0 +1,49 @@
+class Main {
+  public static void main(String[] args) {
+    
+    int [][]a = {{2,2},{4,4}};
+    int [][]b = {{1,2,3},{4,5,6},{7,8,9}};
+
+    print2DArray(a);
+    System.out.println(sum2DArray(a));
+    
+    print2DArray(b);
+    System.out.println(sum2DArray(b));
+
+    int[] c = rowN(b,1);
+    print1DArray(c);
+
+    int[] d = colN(b,1);
+    print1DArray(d);
+    
+  }
+  public static int sum2DArray(int[][] a) {
+    // Complete this method
+    
+    return 1;
+  }
+  public static int[] rowN(int[][] a, int n) {
+    // Complete this method
+    
+    return (new int[]{});
+  }
+  public static int[] colN(int[][] a, int n) {
+    // Complete this method
+    
+    return (new int[]{});
+  }
+  public static void print1DArray(int[] a) {
+    for(int i = 0; i < a.length; i++){
+      System.out.print(a[i]+ " ");
+    }
+    System.out.println("");
+  }
+  public static void print2DArray(int[][] a) {
+    for(int r = 0; r < a.length; r++){
+      for(int c = 0; c < a[0].length; c++){ 
+        System.out.print(a[r][c]+ " ");
+      }
+      System.out.println("");
+    }
+  }
+}
