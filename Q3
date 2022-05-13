@@ -1,0 +1,7 @@
+class Main {
+  public static void main(String[] args) {
+    int[ ][ ] a = new int[5][2];
+    double[ ][ ] b = new double[15][10];
+    String[ ][ ] c = new String[3][10];
+  }
+}
